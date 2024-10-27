@@ -1,1 +1,1 @@
-# JavascriptTheDefinitiveGuide7E
+# "자바스크립트 완벽 가이드"를 읽으면서 작성한 코드
