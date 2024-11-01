@@ -20,11 +20,20 @@ class DefaultMap extends Map {
 
 class Histogram {
     constructor() {
+        /**
+         * @type {DefaultMap}
+         */
         this.letterCounts = new DefaultMap(0);
+        /**
+         * @type {number}
+         */
         this.totalLetters = 0;
     }
 
     // 텍스를 받아서 히스토그램을 업데이트 한다.
+    /**
+     * @param {string} text
+     */
     add(text) {
         text = text.replace(/\s/g, "").toUpperCase();
         for (let character of text) {
@@ -37,6 +46,9 @@ class Histogram {
 
     toString() {
         // 맵을 [key, value] 배열로 변환한다.
+        /**
+         * @type {[string, number]}
+         */
         let entries = [...this.letterCounts];
 
         entries.sort((a, b) => {
