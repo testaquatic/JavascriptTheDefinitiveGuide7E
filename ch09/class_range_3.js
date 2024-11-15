@@ -7,7 +7,6 @@ class Range {
 
     #from = 0;
     #to = 0;
-    static #integerRangePattern = /^\((\d+)\.\.\.(\d+)\)$/;
 
     constructor(from, to) {
         this.#from = from;
@@ -27,6 +26,8 @@ class Range {
     toString() {
         return `(${this.#from}...${this.#to})`;
     }
+
+    static #integerRangePattern = /^\((\d+)\.\.\.(\d+)\)$/;
 
     /**
      *
