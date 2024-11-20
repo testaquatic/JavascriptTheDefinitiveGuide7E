@@ -27,14 +27,14 @@ class Range {
         return `(${this.#from}...${this.#to})`;
     }
 
-    static #integerRangePattern = /^\((\d+)\.\.\.(\d+)\)$/;
+    static integerRangePattern = /^\((\d+)\.\.\.(\d+)\)$/;
 
     /**
      *
      * @param {string} s
      */
     static parse(s) {
-        let matches = s.match(Range.#integerRangePattern);
+        let matches = s.match(Range.integerRangePattern);
         if (!matches) {
             throw new TypeError(`Cannot parse Range from "${s}".`);
         }

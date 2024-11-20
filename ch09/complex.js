@@ -75,6 +75,10 @@ class Complex {
     static I = new Complex(0, 1);
 }
 
+Complex.prototype.conj = function () {
+    return new Complex(this.real(), -this.imaginary());
+};
+
 let c = new Complex(2, 3);
 let d = new Complex(c.imaginary, c.real);
 c.plus(d).toString();
