@@ -158,7 +158,7 @@ class AbstractWritableSet extends AbstractEnumerableSet {
     }
 }
 
-class BitSet extends AbstractWritableSet {
+module.exports = class BitSet extends AbstractWritableSet {
     #max;
     #n;
     #numBytes;
